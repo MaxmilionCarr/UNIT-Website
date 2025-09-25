@@ -1,38 +1,37 @@
-const slider = document.querySelector('.slider');
-const leftArrow = document.querySelector('.left-arrow');
+const slider     = document.querySelector('.slider');
+const leftArrow  = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
+const cards      = slider.querySelectorAll('.publication-item');
 
-let currentIndex = 0; // Track the current slide index
-const publicationItems = document.querySelectorAll('.publication-item');
-const totalItems = publicationItems.length;
-const itemsPerView = 2; // Number of items visible at a time
+const cardWidth = 400;   // must match CSS
+const gap       = 20;    // must match CSS
+const itemsPerView = 2;  // we always show exactly two
 
-// Calculate the maximum and minimum indices
-const maxIndex = totalItems - itemsPerView;
-const minIndex = -(itemsPerView - 1);
+let index = 0;           // left-most visible card
 
-// Function to update the slider position
-function updateSlider() {
-    const slideWidth = publicationItems[0].offsetWidth + 20; // Include gap
-    const translateX = currentIndex * slideWidth;
-    slider.style.transform = `translateX(-${translateX}px)`;
-    console.log(`Slider moved to index: ${currentIndex}, translateX: ${translateX}`);
+function stepWidth() {
+    return cardWidth + gap;
 }
 
-// Left Arrow Click
-leftArrow.addEventListener('click', () => {
-    if (currentIndex > minIndex) {
-        currentIndex--;
-        console.log('Current Index (Left):', currentIndex);
+function updateSlider() {
+    slider.style.transform = `translateX(${-index * stepWidth()}px)`;
+    leftArrow.disabled  = (index === 0);
+    rightArrow.disabled = (index >= cards.length - itemsPerView);
+}
+
+rightArrow.addEventListener('click', () => {
+    if (index < cards.length - itemsPerView) {
+        index++;
         updateSlider();
     }
 });
 
-// Right Arrow Click
-rightArrow.addEventListener('click', () => {
-    if (currentIndex < maxIndex) {
-        currentIndex++;
-        console.log('Current Index (Right):', currentIndex);
+leftArrow.addEventListener('click', () => {
+    if (index > 0) {
+        index--;
         updateSlider();
     }
 });
+
+// initial state
+updateSlider();
