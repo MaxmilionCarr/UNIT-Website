@@ -1,0 +1,85 @@
+/* ---------- Global Variables ---------- */
+:root {
+    /* Brand colours */
+    --unit-blue: rgb(102, 153, 204);
+    --unit-green: rgb(109, 247, 109);
+    --unit-blue-accent: rgb(102, 215, 239);
+    --unit-blue-accent-hover: rgb(0, 178, 218);
+    --footer-bg: #333;
+    --text-dark: #000;
+    --text-light: #fff;
+
+    /* Spacing scale */
+    --space-s: 8px;
+    --space-m: 20px;
+    --space-l: 40px;
+}
+
+/* ---------- Base ---------- */
+body {
+    font-family: sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* ---------- Header ---------- */
+.header {
+    position: relative; 
+    width: 80%;
+    height: 250px;
+    margin: -88px auto 0 auto;
+    background-color: var(--unit-blue);
+    border-radius: 0 0 3000px 3000px;
+}
+
+.header .team-header {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Team Section */
+.team-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.team {
+    border: 5px dotted var(--unit-blue);
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--space-l);
+    padding: var(--space-l);
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: grey;
+}
+
+.team h2 {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    margin: 0;
+    padding-bottom: var(--space-m);
+    color: var(--text-light);
+}
+
+.team-member {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 1fr 0.2fr 0.1fr;
+    justify-content: center;  
+    text-align: center;
+    align-items: center;  
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+}
