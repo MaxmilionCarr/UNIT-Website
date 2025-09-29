@@ -1,0 +1,112 @@
+/* ---------- Global Variables ---------- */
+:root {
+    /* Brand colours */
+    --unit-blue: rgb(102, 153, 204);
+    --unit-green: rgb(109, 247, 109);
+    --unit-blue-accent: rgb(102, 215, 239);
+    --unit-blue-accent-hover: rgb(0, 178, 218);
+    --footer-bg: #333;
+    --text-dark: #000;
+    --text-light: #fff;
+
+    /* Spacing scale */
+    --space-s: 8px;
+    --space-m: 20px;
+    --space-l: 40px;
+}
+
+/* ---------- Base ---------- */
+body {
+    font-family: sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* ---------- Navigation Bar ---------- */
+.navbar-container {
+    position: sticky;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    background: var(--text-light);
+    border-radius: 40px;
+    padding: 2px 20px;
+    margin: 0 auto;
+    max-width: 1050px;
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+}
+
+.navbar-pill a {
+    padding: 12px 20px;
+    font-size: 18px;
+    color: var(--text-dark);
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 60px;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar-pill a:hover {
+    background-color: var(--unit-green);
+    color: var(--text-dark);
+}
+
+.navbar-pill a.active {
+    background-color: var(--unit-blue-accent);
+    color: var(--text-dark);
+}
+
+a.active:hover {
+    background-color: var(--unit-blue-accent-hover);
+    color: var(--text-dark);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--text-light);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: var(--space-m) var(--space-m) 0 var(--space-m);
+}
+
+.footer .contact {
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--space-m);
+}
+
+.footer .logo {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--space-m);
+    max-width: 300px;
+}
+
+.footer .social-media {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-m);
+    font-size: 36px;
+    padding: 0 var(--space-m);
+}
