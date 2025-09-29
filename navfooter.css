@@ -77,8 +77,18 @@ a.active:hover {
     background-color: var(--footer-bg);
     color: var(--text-light);
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: var(--space-m) var(--space-m) 0 var(--space-m);
+}
+
+/* default desktop footer (your existing styles) */
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--text-light);
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: var(--space-m) var(--space-m) 0 var(--space-m);
+    gap: var(--space-m);
 }
 
 .footer .contact {
@@ -110,3 +120,5 @@ a.active:hover {
     font-size: 36px;
     padding: 0 var(--space-m);
 }
+
+

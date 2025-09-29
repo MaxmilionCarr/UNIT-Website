@@ -200,16 +200,20 @@ a.active:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 30px;
     padding-bottom: var(--space-m);
 }
 
 .sponsor-section .sponsor-logos img {
-    width: 250px;
-    height: 250px;
+    width: 100%;          /* image fills the flex/grid cell width */
+    max-width: 200px;     /* never larger than 250px */
+    aspect-ratio: 1 / 1;  /* keep square */
+    height: auto;         /* let the aspect-ratio control height */
     object-fit: cover;
     border-radius: 10px;
 }
+
 
 /* ---------- Publications Section ---------- */
 .publications-section {

@@ -26,11 +26,12 @@ body {
 /* ---------- Header ---------- */
 .header {
     position: relative; 
-    width: 80%;
+    width: min(800px, 70%);
     height: 250px;
-    margin: -88px auto 0 auto;
+    margin: -80px auto 0 auto;
     background-color: var(--unit-blue);
     border-radius: 0 0 3000px 3000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .header .team-header {
@@ -40,42 +41,58 @@ body {
     transform: translate(-50%, -50%);
     color: var(--text-light);
     text-align: center;
+    font-size: 20px;
 }
 
 /* Team Section */
 .team-section {
     margin: 50px 0;
-    text-align: center;
+    padding: 0 20px;
+
 }
 
 .team {
-    border: 5px dotted var(--unit-blue);
+    margin: 30px auto;
     border-radius: 20px;
-    display: grid;
+    display: grid;                  /* keep simple 2-row grid: heading + members */
     grid-template-rows: auto 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: var(--space-l);
+    gap: 40px;
     padding: var(--space-l);
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: grey;
+    max-width: 900px;               /* centre on page and allow it to shrink */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.team:nth-child(odd) {
+    background-color: rgb(194, 194, 194);
+}
+
+.team:nth-child(even) {
+    background-color: var(--unit-blue-accent);
 }
 
 .team h2 {
-    grid-row: 1;
-    grid-column: 1 / -1;
     margin: 0;
-    padding-bottom: var(--space-m);
+    font-size: 36px;
+    text-align: center;
     color: var(--text-light);
 }
 
+/* flex container for the people */
+.team .members {
+    display: flex;
+    flex-wrap: wrap;                /* ✅ lets items wrap onto new lines */
+    justify-content: center;        /* center each line of items */
+    gap: 70px;                      /* space between items both rows & columns */
+}
+
+/* individual person card */
 .team-member {
-    grid-row: 2;
-    display: grid;
-    grid-template-rows: 1fr 0.2fr 0.1fr;
-    justify-content: center;  
+    width: 150px;                 /* fixed card width */
     text-align: center;
-    align-items: center;  
+    display: grid;                  /* optional internal grid for img/name/role */
+    grid-template-rows: auto 35px 10px;
+    margin-bottom: 20px;
 }
 
 .team-member img {
@@ -83,3 +100,4 @@ body {
     height: auto;
     border-radius: 100px;
 }
+
