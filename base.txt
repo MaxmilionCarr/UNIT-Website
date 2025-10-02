@@ -1,0 +1,37 @@
+        <div class="membership-button">
+            <a href="TODO: Join Form" target="_blank" rel="noopener noreferrer">
+                <button class="join-btn">Join UNIT</button>
+            </a>
+        </div>
+        
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="images/index/logo.webp" alt="Logo" class="logo-image">
+            </div>
+
+            <nav class="navbar-pill">
+                <a href="./index.html" class="active">Home</a>
+                <a href="./unit-fund.html">UNIT Fund</a>
+                <a href="./research.html">Research</a>
+                <a href="./events.html">Events</a>
+                <a href="./team.html">Our Team</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+        </div>
+
+        <footer class="footer">
+            <div class="contact">
+                <p>Email: something@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="copyright">
+                <img src="images/index/unitlogo2.webp" alt="Logo" class="logo">
+                <p>&copy; 2025 University Network for Investing and Trading. All rights reserved.</p>
+            </div>
+            <div class="social-media">
+                <i class="fi fi-brands-facebook"></i>
+                <i class="fi fi-brands-instagram"></i>
+                <i class="fi fi-brands-linkedin"></i>
+            </div>
+        </footer>
+

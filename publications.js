@@ -27,41 +27,40 @@ document.addEventListener("DOMContentLoaded", () => {
         pub.topics.forEach(t => topics.add(t));
       });
 
-      // Build checkbox filters
-    authors.forEach(a => {
+      // Build author filter options
+      authors.forEach(a => {
         const opt = document.createElement("div");
         opt.className = "filter-option";
         opt.textContent = a;
         opt.dataset.value = a;
-        opt.addEventListener("click", () => {
-            opt.classList.toggle("selected"); // toggle highlight
-            render(); // refresh publications
+        opt.addEventListener("click", e => {
+          e.stopPropagation(); // keep dropdown open
+          opt.classList.toggle("selected");
+          render();
         });
-
         authorFilter.appendChild(opt);
-    });
+      });
 
-    topics.forEach(t => {
+      // Build topic filter options
+      topics.forEach(t => {
         const opt = document.createElement("div");
         opt.className = "filter-option";
         opt.textContent = t;
         opt.dataset.value = t;
-        opt.addEventListener("click", () => {
-            opt.classList.toggle("selected");
-            render();
+        opt.addEventListener("click", e => {
+          e.stopPropagation(); // keep dropdown open
+          opt.classList.toggle("selected");
+          render();
         });
         topicFilter.appendChild(opt);
-    });
+      });
 
-    
       // Render older publications with filters applied
       function render() {
         olderList.innerHTML = "";
 
         const selectedAuthors = Array.from(authorFilter.querySelectorAll(".selected")).map(div => div.dataset.value);
-
         const selectedTopics = Array.from(topicFilter.querySelectorAll(".selected")).map(div => div.dataset.value);
-
 
         olderPubs.forEach(pub => {
           const pubAuthors = pub.authors.split(",").map(a => a.trim());
@@ -96,29 +95,26 @@ document.addEventListener("DOMContentLoaded", () => {
       // Initial render
       render();
 
-      // Listeners for checkboxes
-      authorFilter.addEventListener("change", render);
-      topicFilter.addEventListener("change", render);
-
-      // Clear filters
+      // Clear filters — remove all highlights
       clearBtn.addEventListener("click", () => {
-        authorFilter.querySelectorAll("input").forEach(i => (i.checked = false));
-        topicFilter.querySelectorAll("input").forEach(i => (i.checked = false));
+        authorFilter.querySelectorAll(".filter-option").forEach(opt => opt.classList.remove("selected"));
+        topicFilter.querySelectorAll(".filter-option").forEach(opt => opt.classList.remove("selected"));
         render();
       });
 
       // Dropdown toggle logic
       document.querySelectorAll(".dropbtn").forEach(btn => {
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", e => {
+          e.stopPropagation(); // prevent outside click handler from firing
           const dropdown = btn.parentElement;
           dropdown.classList.toggle("show");
         });
       });
 
-      // !TODO: Close dropdowns when clicking outside
+      // Close dropdowns only when clicking outside
       window.addEventListener("click", e => {
-        if (!e.target.matches(".dropbtn")) {
-            document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("show"));
+        if (!e.target.closest(".dropdown")) {
+          document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("show"));
         }
       });
     });

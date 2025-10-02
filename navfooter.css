@@ -34,7 +34,7 @@ body {
     border-radius: 40px;
     padding: 2px 20px;
     margin: 0 auto;
-    max-width: 1050px;
+    max-width: 800px;
     height: 60px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     z-index: 1000;
@@ -121,4 +121,28 @@ a.active:hover {
     padding: 0 var(--space-m);
 }
 
+/* ---------- Membership Button ---------- */
+.membership-button {
+    bottom: 3%;
+    right: 1%;
+    position: fixed;
+    z-index: 1001;
+}
+
+.membership-button .join-btn {
+    background-color: var(--unit-green);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.membership-button .join-btn:hover {
+    background-color: #7CFC00; /* Lighter green on hover */
+    transform: translateY(-2px);
+}
 

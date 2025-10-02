@@ -4,11 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Web Page</title>
-        <link rel="stylesheet" href="research.css">
+        <title>Home</title>
+        <link rel="stylesheet" href="events.css">
         <link rel="stylesheet" href="navfooter.css">
         <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
-        <script src="publications.js" defer></script>
+        <script src="script.js" defer></script>
     </head>
 
     <body>
@@ -27,59 +27,24 @@
             <nav class="navbar-pill">
                 <a href="./index.html">Home</a>
                 <a href="./unit-fund.html">UNIT Fund</a>
-                <a href="./research.html" class="active">Research</a>
-                <a href="./events.html">Events</a>
+                <a href="./research.html">Research</a>
+                <a href="./events.html" class="active">Events</a>
                 <a href="./team.html">Our Team</a>
                 <a href="./contact.html">Contact</a>
             </nav>
         </div>
 
         <div class="header">
-            <div class="research-header">
-                <h1>Research</h1>
-                <p>Explore our latest research publications and insights.</p>
+            <div class="events-header">
+                <h1>Events</h1>
+                <p>Stay tuned for upcoming events and workshops!</p>
             </div>
         </div>
 
+        <div class="events-section">
+            <div class="events-list"></div> <!--TODO: Make this automated with json + JS-->
+        </div>
         
-        <!-- Recent publications -->
-        <div class="recent-publications">
-            <h2>Recent Publications</h2>
-            <div class="publications-list" id="recent-list"></div>
-        </div>
-
-        
-
-        <!-- All publications -->
-        <div class="older-publications">
-            
-            <div class="seperator">
-                <h1>All Publications</h1>
-            </div>
-
-        <!-- Filter buttons -->
-            <div class="filters">
-                <div class="dropdown">
-                    <button class="dropbtn">Filter by Author ▼</button>
-                    <div class="dropdown-content" id="author-filter"></div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Filter by Topic ▼</button>
-                    <div class="dropdown-content" id="topic-filter"></div>
-                </div>
-
-                <button id="clear-filters">Clear Filters</button>
-            </div>
-
-            <hr class="filter-divider">
-
-
-        <!-- Older publications -->
-            <div class="publications-list" id="older-list"></div>
-        </div>
-
-
         <footer class="footer">
             <div class="contact">
                 <p>Email: something@example.com</p>
@@ -87,7 +52,7 @@
             </div>
             <div class="copyright">
                 <img src="images/index/unitlogo2.webp" alt="Logo" class="logo">
-                <p>&copy; 2024 My Web Page. All rights reserved.</p>
+                <p>&copy; 2025 University Network for Investing and Trading. All rights reserved.</p>
             </div>
             <div class="social-media">
                 <i class="fi fi-brands-facebook"></i>
