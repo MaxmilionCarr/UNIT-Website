@@ -1,0 +1,74 @@
+[
+  {
+    "title": "AI in Finance",
+    "authors": "Jane Doe, John Smith",
+    "date": "2024-05-10",
+    "image": "images/publications/ai-finance.jpg",
+    "link": "https://example.com/paper1",
+    "topics": ["AI", "Finance"]
+  },
+  {
+    "title": "Machine Learning Trends",
+    "authors": "Alice Johnson",
+    "date": "2023-11-20",
+    "image": "images/publications/ml-trends.jpg",
+    "link": "https://example.com/paper2",
+    "topics": ["Machine Learning", "Trends"]
+  },
+  {
+    "title": "Quantitative Research Overview",
+    "authors": "Bob Williams",
+    "date": "2022-09-01",
+    "image": "images/publications/quant-research.jpg",
+    "link": "https://example.com/paper3",
+    "topics": ["Quant", "Finance"]
+  },
+  {
+    "title": "Quantitative Research Overview",
+    "authors": "Bob Williams",
+    "date": "2022-09-01",
+    "image": "images/publications/quant-research.jpg",
+    "link": "https://example.com/paper3",
+    "topics": ["Quant", "Finance"]
+  },
+  {
+    "title": "Quantitative Research Overview",
+    "authors": "Bob Williams",
+    "date": "2022-09-01",
+    "image": "images/publications/quant-research.jpg",
+    "link": "https://example.com/paper3",
+    "topics": ["Quant", "Finance"]
+  },
+  {
+    "title": "Quantitative Research Overview",
+    "authors": "Bob Williams",
+    "date": "2022-09-01",
+    "image": "images/publications/quant-research.jpg",
+    "link": "https://example.com/paper3",
+    "topics": ["Quant", "Finance"]
+  },
+  {
+    "title": "Quantitative Research Overview",
+    "authors": "Bob Williams",
+    "date": "2022-09-01",
+    "image": "images/publications/quant-research.jpg",
+    "link": "https://example.com/paper3",
+    "topics": ["Quant", "Finance"]
+  },
+  {
+    "title": "Quantitative Research Overview",
+    "authors": "Bob Williams",
+    "date": "2022-09-01",
+    "image": "images/publications/quant-research.jpg",
+    "link": "https://example.com/paper3",
+    "topics": ["Quant", "Finance"]
+  },
+  {
+    "title": "Quantitative Research Overview",
+    "authors": "Bob Williams",
+    "date": "2022-09-01",
+    "image": "images/publications/quant-research.jpg",
+    "link": "https://example.com/paper3",
+    "topics": ["Quant", "Finance"]
+  }
+]

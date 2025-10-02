@@ -1,0 +1,245 @@
+:root {
+    /* Brand colours */
+    --unit-blue: rgb(102, 153, 204);
+    --unit-green: rgb(109, 247, 109);
+    --unit-blue-accent: rgb(102, 215, 239);
+    --unit-blue-accent-hover: rgb(0, 178, 218);
+    --footer-bg: #333;
+    --text-dark: #000;
+    --text-light: #fff;
+
+    /* Spacing scale */
+    --space-s: 8px;
+    --space-m: 20px;
+    --space-l: 40px;
+}
+
+body {
+    font-family: sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+    background-image: url("./images/research/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ---------- Header ---------- */
+.header {
+    color: var(--text-light);
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 3em;
+    color: black;
+}
+
+.header p {
+    font-size: 1.2em;
+    color: black;
+    margin-top: var(--space-s);
+}
+
+/* ---------- Publications Section ---------- */
+
+/* Recent Publications */
+.recent-publications {
+    background: var(--unit-blue);
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: var(--space-l);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recent-publications h2 {
+    text-align: center;
+    padding: var(--space-m);
+    margin-top: 0;
+    font-size: 24px;
+    color: var(--text-light);
+    border-radius: 200px;
+    display: inline-block;
+    background-color: darkblue;
+}
+
+/* Seperator */
+.seperator {
+    border-radius: 1px;
+    text-align: center;
+}
+
+.seperator h1 {
+    text-align: center;
+    padding: var(--space-m);
+    margin-top: 0;
+    font-size: 24px;
+    color: darkblue;
+    border-radius: 200px;
+    display: inline-block;
+    background-color: #f1f1f1;
+}
+
+/* Older Publications */
+.older-publications {
+    padding: 30px 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-bottom: 40px;
+}
+
+
+/* Filters */
+.filters {
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: var(--unit-blue, #6699cc);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  background: var(--unit-blue-accent-hover, #007baa);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 100%;          
+    max-height: 150px;        
+    overflow-y: auto;         
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.dropdown-content div {
+  padding: 8px 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dropdown-content div:hover {
+  background-color: #f1f1f1;
+}
+
+/* 🔥 selected (custom highlight) */
+.dropdown-content div.selected {
+  background-color: var(--unit-blue, #6699cc);
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.dropdown-content label {
+  display: block;
+  text-align: left;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.dropdown-content label:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-content input {
+  margin-right: 8px;
+}
+
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
+#clear-filters {
+  background: var(--unit-blue, #6699cc);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#clear-filters:hover {
+  background: var(--unit-blue-accent-hover, #007baa);
+}
+
+/* Publication grid */
+.publications-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.publication {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.publication img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.publication .content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.publication h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.publication .meta {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.publication a {
+  margin-top: auto;
+  color: var(--unit-blue, #6699cc);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.publication a:hover {
+  text-decoration: underline;
+}
